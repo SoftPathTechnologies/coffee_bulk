@@ -1,6 +1,6 @@
 # coffee_bulk
 
-A new Flutter project.
+A Flutter UI Design from a clone dribble project https://dribbble.com/shots/15475209/attachments/7248647?mode=media.
 
 ## Getting Started
 

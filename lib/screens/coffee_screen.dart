@@ -6,6 +6,7 @@ import 'package:coffee_bulk/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CoffeeScreen extends StatefulWidget {
   Map<String, dynamic> coffeeDetails;
@@ -29,7 +30,7 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
         child: ListView(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -44,12 +45,12 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                                 fit: BoxFit.cover,
                                 image: AssetImage(
                                     "${widget.coffeeDetails['image']}")),
-                            borderRadius: BorderRadius.circular(40)),
+                            borderRadius: BorderRadius.circular(40.r)),
                       ),
                       Positioned(
                           child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 20, vertical: 20),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 20.w, vertical: 20.h),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -58,13 +59,13 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                                 Navigator.of(context).pop();
                               },
                               child: Container(
-                                height: 40,
-                                width: 40,
+                                height: 40.h,
+                                width: 40.w,
                                 decoration: BoxDecoration(
                                     boxShadow: [
                                       BoxShadow(
                                         offset: Offset(0, 1),
-                                        blurRadius: 5,
+                                        blurRadius: 5.r,
                                         color: Colors.black.withOpacity(0.3),
                                       ),
                                     ],
@@ -79,17 +80,17 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                               ),
                             ),
                             Container(
-                              height: 40,
-                              width: 40,
+                              height: 40.h,
+                              width: 40.w,
                               decoration: BoxDecoration(
                                   boxShadow: [
                                     BoxShadow(
                                       offset: Offset(0, 1),
-                                      blurRadius: 5,
+                                      blurRadius: 5.r,
                                       color: Colors.black.withOpacity(0.3),
                                     ),
                                   ],
-                                  borderRadius: BorderRadius.circular(18),
+                                  borderRadius: BorderRadius.circular(18.r),
                                   border: Border.all(
                                       width: 1, color: Color(0xFF232831)),
                                   color: Colors.black),
@@ -108,8 +109,8 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                           child: BlurryContainer(
                               blur: 20,
                               elevation: 10,
-                              borderRadius: BorderRadius.circular(30),
-                              height: AppLayout.getHeight(160),
+                              borderRadius: BorderRadius.circular(30.r),
+                              height: AppLayout.getHeight(160.h),
                               width: MediaQuery.of(context).size.width,
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
@@ -181,19 +182,21 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                                                 MainAxisAlignment.spaceAround,
                                             children: [
                                               Container(
-                                                width: AppLayout.getwidth(60),
-                                                height: AppLayout.getHeight(60),
+                                                width: AppLayout.getwidth(60.w),
+                                                height:
+                                                    AppLayout.getHeight(60.h),
                                                 decoration: BoxDecoration(
                                                   boxShadow: [
                                                     BoxShadow(
                                                       offset: Offset(0, 1),
-                                                      blurRadius: 5,
+                                                      blurRadius: 5.r,
                                                       color: Colors.black
                                                           .withOpacity(0.3),
                                                     ),
                                                   ],
                                                   borderRadius:
-                                                      BorderRadius.circular(10),
+                                                      BorderRadius.circular(
+                                                          10.r),
                                                   color: Color(0xFF101419),
                                                 ),
                                                 child: Center(
@@ -213,15 +216,17 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                                                             .copyWith(
                                                                 color: Colors
                                                                     .white70,
-                                                                fontSize: 12),
+                                                                fontSize:
+                                                                    12.sp),
                                                       )
                                                     ],
                                                   ),
                                                 ),
                                               ),
                                               Container(
-                                                width: AppLayout.getwidth(60),
-                                                height: AppLayout.getHeight(60),
+                                                width: AppLayout.getwidth(60.w),
+                                                height:
+                                                    AppLayout.getHeight(60.h),
                                                 decoration: BoxDecoration(
                                                   boxShadow: [
                                                     BoxShadow(
@@ -232,7 +237,8 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                                                     ),
                                                   ],
                                                   borderRadius:
-                                                      BorderRadius.circular(10),
+                                                      BorderRadius.circular(
+                                                          10.r),
                                                   color: Color(0xFF101419),
                                                 ),
                                                 child: Center(
@@ -252,7 +258,8 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                                                             .copyWith(
                                                                 color: Colors
                                                                     .white70,
-                                                                fontSize: 12),
+                                                                fontSize:
+                                                                    12.sp),
                                                       )
                                                     ],
                                                   ),
@@ -262,27 +269,28 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                                           ),
                                           Gap(10),
                                           Container(
-                                            width: AppLayout.getwidth(200),
-                                            height: AppLayout.getHeight(40),
+                                            width: AppLayout.getwidth(200.w),
+                                            height: AppLayout.getHeight(40.h),
                                             decoration: BoxDecoration(
                                                 boxShadow: [
                                                   BoxShadow(
                                                     offset: Offset(0, 1),
-                                                    blurRadius: 5,
+                                                    blurRadius: 5.r,
                                                     color: Colors.black
                                                         .withOpacity(0.3),
                                                   ),
                                                 ],
                                                 color: Color(0xFF101419),
                                                 borderRadius:
-                                                    BorderRadius.circular(30)),
+                                                    BorderRadius.circular(
+                                                        30.r)),
                                             child: Center(
                                               child: Text(
                                                 "Medium Roasted",
                                                 style: Styles.textStyle
                                                     .copyWith(
                                                         color: Colors.white70,
-                                                        fontSize: 12),
+                                                        fontSize: 12.sp),
                                               ),
                                             ),
                                           )
@@ -300,17 +308,19 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                   Text(
                     "Description",
                     style: Styles.headLineStyle3
-                        .copyWith(color: Colors.white60, fontSize: 19),
+                        .copyWith(color: Colors.white60, fontSize: 19.sp),
                   ),
                   Gap(10),
                   Text("${widget.coffeeDetails['desc']} ",
                       style: Styles.headLineStyle3.copyWith(
-                          color: Colors.white60, fontSize: 17, height: 1.5)),
+                          color: Colors.white60,
+                          fontSize: 17.sp,
+                          height: 1.5.h)),
                   Gap(40),
                   Text(
                     "Size",
                     style: Styles.headLineStyle3
-                        .copyWith(color: Colors.white60, fontSize: 19),
+                        .copyWith(color: Colors.white60, fontSize: 19.sp),
                   ),
                   Gap(20),
                   Row(
@@ -325,8 +335,8 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                           });
                         },
                         child: Container(
-                          height: 50,
-                          width: AppLayout.getwidth(100),
+                          height: 50.h,
+                          width: AppLayout.getwidth(100.w),
                           decoration: BoxDecoration(
                               border: Border.all(
                                   width: 1,
@@ -334,14 +344,14 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                                       ? kPrimaryColor
                                       : Colors.transparent),
                               color: Color(0xFF141921),
-                              borderRadius: BorderRadius.circular(10)),
+                              borderRadius: BorderRadius.circular(10.r)),
                           child: Center(
                             child: Text("S",
                                 style: Styles.textStyle.copyWith(
                                     color: smallIsSelected
                                         ? kPrimaryColor
                                         : Colors.white70,
-                                    fontSize: 18)),
+                                    fontSize: 18.sp)),
                           ),
                         ),
                       ),
@@ -354,8 +364,8 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                           });
                         },
                         child: Container(
-                          height: 50,
-                          width: AppLayout.getwidth(100),
+                          height: 50.h,
+                          width: AppLayout.getwidth(100.w),
                           decoration: BoxDecoration(
                               border: Border.all(
                                   width: 1,
@@ -363,14 +373,14 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                                       ? kPrimaryColor
                                       : Colors.transparent),
                               color: Color(0xFF141921),
-                              borderRadius: BorderRadius.circular(10)),
+                              borderRadius: BorderRadius.circular(10.r)),
                           child: Center(
                             child: Text("M",
                                 style: Styles.textStyle.copyWith(
                                     color: mediumIsSelected
                                         ? kPrimaryColor
                                         : Colors.white70,
-                                    fontSize: 18)),
+                                    fontSize: 18.sp)),
                           ),
                         ),
                       ),
@@ -383,8 +393,8 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                           });
                         },
                         child: Container(
-                          height: 50,
-                          width: AppLayout.getwidth(100),
+                          height: 50.h,
+                          width: AppLayout.getwidth(100.w),
                           decoration: BoxDecoration(
                               border: Border.all(
                                   width: 1,
@@ -392,14 +402,14 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                                       ? kPrimaryColor
                                       : Colors.transparent),
                               color: Color(0xFF141921),
-                              borderRadius: BorderRadius.circular(10)),
+                              borderRadius: BorderRadius.circular(10.r)),
                           child: Center(
                             child: Text("L",
                                 style: Styles.textStyle.copyWith(
                                     color: largeIsSelected
                                         ? kPrimaryColor
                                         : Colors.white70,
-                                    fontSize: 18)),
+                                    fontSize: 18.sp)),
                           ),
                         ),
                       ),
@@ -434,8 +444,8 @@ class _CoffeeScreenState extends State<CoffeeScreen> {
                         ],
                       ),
                       Container(
-                        width: AppLayout.getwidth(200),
-                        height: AppLayout.getHeight(60),
+                        width: AppLayout.getwidth(200.w),
+                        height: AppLayout.getHeight(60.h),
                         decoration: BoxDecoration(
                             color: kPrimaryColor,
                             borderRadius: BorderRadius.circular(20)),

@@ -34,7 +34,7 @@ class _BottomBarState extends State<BottomBar> {
       body: _widgetOptions[_selectedIndex],
       backgroundColor: kBackgroundColor,
       bottomNavigationBar: BlurryContainer(
-        height: 120,
+        // height: 120,
         blur: 2,
         elevation: 0,
         color: Colors.transparent,
